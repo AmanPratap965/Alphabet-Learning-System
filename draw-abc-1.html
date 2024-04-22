@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drawing Page</title>
+  <link rel="stylesheet" href="draw-abc-1.css">
+</head>
+<body>
+  <!-- <!-- <header>
+    <!-- <div class="logo" src = "logo.png">Your Logo</div> -->
+    <div class="logo" id = "logo">
+      <img src="logo.png" alt="ABC Learning Logo">
+    </div>
+
+  </header> -->
+   -->
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Brush & Colors</h2>
+      <div class="brush-options">
+        <label for="brush-size">Brush Size:</label>
+        <input type="range" id="brush-size" min="1" max="20" value="5">
+        
+        <label for="brush-type">Brush Type:</label>
+        <select id="brush-type">
+          <option value="square">Square</option>
+          <option value="circle">Circle</option>
+        </select>
+      </div>
+      
+      <div class="color-options">
+        <label for="color-picker">Select Color:</label>
+        <input type="color" id="color-picker">
+      </div>
+    </aside>
+    
+    <main class="drawing-board" id = "drawing-board">
+      <canvas id="canvas" width="800" height="600"></canvas>
+    </main>
+    
+    <aside class="sidebar">
+      <h2>Alphabets</h2>
+      <ul class="alphabet-list">
+        <li data-alphabet="A">A</li>
+        <li data-alphabet="B">B</li>
+        <li data-alphabet="C">C</li>
+        <li data-alphabet="A">D</li>
+        <li data-alphabet="B">E</li>
+        <li data-alphabet="C">F</li>
+        <li data-alphabet="A">J</li>
+        <li data-alphabet="B">H</li>
+        <li data-alphabet="C">I</li>
+        <li data-alphabet="A">J</li>
+        <li data-alphabet="B">K</li>
+        <li data-alphabet="C">L</li>
+        <li data-alphabet="A">M</li>
+        <li data-alphabet="B">N</li>
+        <li data-alphabet="C">O</li>
+        <!-- Add more alphabet options as needed -->
+      </ul>
+    </aside>
+  </div>
+
+  <script src="draw-abc-1.js"></script>
+</body>
+</html>

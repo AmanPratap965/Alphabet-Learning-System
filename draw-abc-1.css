@@ -1,0 +1,144 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    /* text-align: center; */
+    background-image: url('backgroud.jpg');
+    background-size: cover;
+    background-position: center;
+    /* height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+  
+  /* Header styles */
+
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url('backgroud.jpg');
+    /* background-size: cover; */
+  } */
+  .navbar {
+    /* background-color: #333; */
+    background: linear-gradient(to bottom, #edeee7bb, #eff0ecb9); /* Gradient from top to bottom */
+
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    
+    margin-right: auto; /* Pushes logo to the left */
+  }
+  .logo img {
+    width: 80px;
+    height: auto;
+  }
+  nav {
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    /* margin-right: 20px; */
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    /* padding: 10px 20px; */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  #clearButton {
+    display: block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: linear-gradient(to bottom, #f6f7f6c2, #e7eeeab4); /* Gradient background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: background-color 0.3s;
+  }
+  .container {
+    display: flex;
+  }
+  
+  .sidebar {
+    background: linear-gradient(to bottom, #f2f2f3a2, #f4f5f7be); /* Gradient from top to bottom */
+    padding: 20px;
+    width: 200px;
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 10px;
+  }
+  
+  .drawing-board {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    border-radius: 10px;
+    /* max-width: 800px; Optional: Limit the width of the drawing board */
+  }
+  
+  canvas {
+    border: 1px solid #ccc;
+  }
+  
+  .brush-options {
+    margin-bottom: 20px;
+  }
+  
+  .brush-options label,
+  .color-options label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .color-options {
+    margin-bottom: 20px;
+  }
+  
+  .alphabet-list {
+    list-style-type: none;
+  }
+  
+  .alphabet-list li {
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f19292;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .alphabet-list li:hover {
+    background-color: #ccc;
+  }
+  

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>abcd</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style type="text/css">
+
+
+        /* Style for the back button */
+        .back-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        window.onscroll = function () {
+            myFunction()
+        };
+        var abcd = document.getElementById("abcd");
+        var sticky = abcd.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                abcd.classList.add("sticky")
+            } else {
+                abcd.classList.remove("sticky");
+            }
+        }
+
+        document.getElementById('demo').innerHTML = Date();
+    </script>
+
+    <!-- Back to Home button -->
+    <div class="back-btn">
+        <a href="home.html" class="btn btn-primary">Back to Home</a>
+    </div>
+
+    <!-- Add your script tags here if needed -->
+    <script src="wasm_exec.js"></script>
+    <script>
+        // Polyfill
+        if (!WebAssembly.instantiateStreaming) {
+            WebAssembly.instantiateStreaming = async (resp, importObject) => {
+                const source = await (await resp).arrayBuffer();
+                return await WebAssembly.instantiate(source, importObject);
+            };
+        }
+
+        const go = new Go();
+        WebAssembly.instantiateStreaming(fetch("letters.wasm"), go.importObject).then(result => {
+            go.run(result.instance);
+        });
+    </script>
+</body>
+</html>
